@@ -15,9 +15,8 @@
     "tag",
     "aws"
   ],
-  "author": "Gustavo Fragoso",
+  "author": "Liron Kopinsky",
   "license": "MIT",
   "dependencies": {
-    "lodash": "^4.17.5"
   }
 }
