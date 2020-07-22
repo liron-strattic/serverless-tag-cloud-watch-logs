@@ -22,11 +22,12 @@ class ServerlessCloudWatchLogsTagPlugin {
 
     const commands = {
       deploy: {
-        lifecycleEvents: ['packaging', 'functions', 'deploy']
+        lifecycleEvents: ['packaging', 'functions', 'deploy', 'aws']
       }
     }
     const hooks = {
-      'after:deploy:deploy': this.execute.bind(this)
+      'after:deploy:deploy': this.execute.bind(this),
+      'after:aws:deploy:finalize': this.execute.bind(this)
       // 'after:deploy:function:deploy': this.execute.bind(this)
     }
     this.commands = commands
